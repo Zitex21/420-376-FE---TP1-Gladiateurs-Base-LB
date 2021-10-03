@@ -6,7 +6,12 @@ public class Personnage {
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Attributs">
-    // TODO : Mettre vos attributs ici
+    String nom;
+    int pointsDeVie;
+    int valeurMaxAttaque;
+    int valeurDefense;
+    int initiative;
+    
     // </editor-fold>
 
     // **************************************************************************
@@ -14,22 +19,67 @@ public class Personnage {
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Constructeurs et initialisation">
     public Personnage(String nom, int attaqueMax, int defense, int pvs, int ini) {
-        // TODO : Constructeur AVEC paramètres
+        nom = nom;
+        pointsDeVie = pvs;
+        valeurMaxAttaque = attaqueMax;  
+        valeurDefense = defense;
+        initiative = ini;
     }
 
     public Personnage() {
-        // TODO : Constructeur SANS paramètres qui initialise à ZÉRO ou à ""
+        nom = "";
+        pointsDeVie = 0;
+        valeurMaxAttaque = 0;
+        valeurDefense = 0;
+        initiative = 0;   
     }
     // </editor-fold>
+    public String getNom() {
+        return nom;
+        // TODO : Afficher les infos du personnage, tel que montré dans l'énoncé
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public int getPointsDeVie() {
+        return pointsDeVie;
+    }
+
+    public void setPointsDeVie(int pointsDeVie) {
+        this.pointsDeVie = pointsDeVie;
+    }
+
+    public int getValeurMaxAttaque() {
+        return valeurMaxAttaque;
+    }
+
+    public void setValeurMaxAttaque(int valeurMaxAttaque) {
+        this.valeurMaxAttaque = valeurMaxAttaque;
+    }
+
+    public int getValeurDefense() {
+        return valeurDefense;
+    }
+
+    public void setValeurDefense(int valeurDefense) {
+        this.valeurDefense = valeurDefense;
+    }
+
+    public int getInitiative() {
+        return initiative;
+    }
 
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Getters et setters">
-    // TODO : Les getters
-    // TODO : Les setters
-    // </editor-fold>
+    public void setInitiative(int initiative) {
+        this.initiative = initiative;
+    }
 
+    // </editor-fold>
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************

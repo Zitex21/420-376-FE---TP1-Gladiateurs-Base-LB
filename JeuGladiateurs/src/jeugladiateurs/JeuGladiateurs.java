@@ -14,8 +14,8 @@ public class JeuGladiateurs {
     // <editor-fold defaultstate="collapsed" desc="Instanciation des objets">
     CompteurDeTour tour = new CompteurDeTour();
     AffichageEcran affichage = new AffichageEcran();
-    Personnage personnage1 = new Personnage();
-    Personnage personnage2 = new Personnage();
+    Personnage personnage1 = new Personnage("Bob le malchanceux", 15, 15, 70, 15);
+    Personnage personnage2 = new Personnage("Igore l'emplaleur", 25, 5, 100, 30);
     // </editor-fold>
 
     // **************************************************************************
