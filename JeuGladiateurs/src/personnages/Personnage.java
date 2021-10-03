@@ -18,8 +18,8 @@ public class Personnage {
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Constructeurs et initialisation">
-    public Personnage(String nom, int attaqueMax, int defense, int pvs, int ini) {
-        nom = nom;
+    public Personnage(String nomPersonnage, int attaqueMax, int defense, int pvs, int ini) {
+        nom = nomPersonnage;
         pointsDeVie = pvs;
         valeurMaxAttaque = attaqueMax;  
         valeurDefense = defense;
@@ -85,7 +85,18 @@ public class Personnage {
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
     public void afficherInfosPersonnage() {
-        // TODO : Afficher les infos du personnage, tel que montré dans l'énoncé
+        System.out.println();
+        System.out.println(this.nom);
+        System.out.println("    Attaque : " + this.valeurMaxAttaque);
+        System.out.println("    Défense : " + this.valeurDefense);
+        System.out.println("    Points de vie : " + this.pointsDeVie);
+        System.out.println("    Initiative : " + this.initiative);
+        if (this.pointsDeVie > 0) {
+            System.out.println("    Statut : Vivant");
+        }
+        else{
+            System.out.println("    Statut : Mort");   
+        }
     }
 
     private int attaqueCalcul() {

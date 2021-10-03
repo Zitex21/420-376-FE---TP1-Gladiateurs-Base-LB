@@ -22,7 +22,8 @@ public class JeuGladiateurs {
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Affichage pré-combat">
-    // TODO : Afficher les infos de chaque personnage
+    personnage1.afficherInfosPersonnage();
+    personnage2.afficherInfosPersonnage();
     // TODO : Afficher le message du début du combat
     // </editor-fold>
 
