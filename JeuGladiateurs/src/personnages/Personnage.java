@@ -12,6 +12,8 @@ public class Personnage {
     int valeurMaxAttaque;
     int valeurDefense;
     int initiative;
+    int dommages;
+    int forceDeFrape;
     
     // </editor-fold>
 
@@ -106,9 +108,20 @@ public class Personnage {
     }
 
     public void frapperPersonnage(Personnage personnageCible) {
-        // TODO : Récupérer la valeur d'attaque pour ce tour, calculer les dégats,
-        //modifier les points de vie du personnage cible, afficher les détails
-        // sur l'attaque, tel que montré dans l'énoncé.
+        forceDeFrape = attaqueCalcul();
+        dommages = forceDeFrape - personnageCible.valeurDefense;
+        if (dommages < 0) {
+            dommages = 0;
+        }
+        personnageCible.pointsDeVie = personnageCible.pointsDeVie - dommages;
+        if (personnageCible.pointsDeVie < 0) {
+            personnageCible.pointsDeVie = 0;
+        }
+        
+        System.out.println("");
+        System.out.println(nom + " attaque avec une puissance de : " + forceDeFrape);
+        System.out.println(nom + " a une défence de : " + personnageCible.valeurDefense);
+        System.out.println("Les dommages sont donc de : " + dommages);
     }
 
     public void setNewInitiativeRandom() {
