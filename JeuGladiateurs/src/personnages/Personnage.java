@@ -120,7 +120,7 @@ public class Personnage {
         
         System.out.println("");
         System.out.println(nom + " attaque avec une puissance de : " + forceDeFrape);
-        System.out.println(nom + " a une défence de : " + personnageCible.valeurDefense);
+        System.out.println(personnageCible.nom + " a une défence de : " + personnageCible.valeurDefense);
         System.out.println("Les dommages sont donc de : " + dommages);
     }
 
