@@ -126,7 +126,7 @@ public class Personnage {
 
     public void setNewInitiativeRandom() {
         Random rand = new Random();
-        this.initiative = rand.nextInt(101);
+        this.initiative = rand.nextInt(100);
     }
     // </editor-fold>
 }

@@ -30,6 +30,6 @@ public class Mirmillon extends Personnage{
     @Override
     public void setNewInitiativeRandom(){
         Random rand = new Random();
-        this.setInitiative(rand.nextInt(31));
+        this.setInitiative(rand.nextInt(30));
     }
 }
