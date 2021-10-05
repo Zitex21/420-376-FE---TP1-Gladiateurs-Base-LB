@@ -1,6 +1,7 @@
 package jeugladiateurs;
 
 import personnages.Personnage;
+import personnages.Mirmillon;
 import combat.CompteurDeTour;
 import combat.AffichageEcran;
 
@@ -16,6 +17,9 @@ public class JeuGladiateurs {
     AffichageEcran affichage = new AffichageEcran();
     Personnage personnage1 = new Personnage("Bob le malchanceux", 15, 15, 70, 15);
     Personnage personnage2 = new Personnage("Igore l'emplaleur", 25, 5, 100, 30);
+    Mirmillon personnage3 = new Mirmillon("Igore l'emplaleur", 25, 5, 100, 30);
+    personnage3.frapperPersonnage(personnage2);
+
     // </editor-fold>
 
     // **************************************************************************
@@ -51,8 +55,6 @@ public class JeuGladiateurs {
         tour.augmenteTour();
         affichage.afficherSeparateurDeTour();
        
-
-    // TODO : La boucle contenant les étapes du combat
    
         } while (personnage1.getPointsDeVie() > 0 && personnage2.getPointsDeVie() > 0);
     affichage.afficheVictoire(personnage1, personnage2);
